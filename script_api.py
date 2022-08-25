@@ -36,7 +36,7 @@ def get_predictions():
     user_data=train.iloc[[idx]]
     prediction_client = model_rf.predict_proba(user_data)
     
-    return str(prediction_client[0][1])
+    return str(round(prediction_client[0][1],2)*100)
 
 
     
